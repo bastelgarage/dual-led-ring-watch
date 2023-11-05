@@ -38,6 +38,9 @@ This project is a creative take on a digital clock, utilizing a circular arrange
 ## Customization
 Modify the `setTimeOnLEDs` function in the code to personalize the LED colors for hours and minutes to your taste or match your interior design.
 
+![Layers](/picture3D_layer.png)
+
+
 ## Tags
 
 - `NeoPixel`
