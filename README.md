@@ -15,7 +15,7 @@ This project is a creative take on a digital clock, utilizing a circular arrange
 
 ## Hardware Components
 - ESP8266 WiFi Microcontroller [WeMos D1 mini ESP8266](https://www.bastelgarage.ch/wemos-d1-mini-esp8266-nodemcu-lua-board)
-- 2x 60 LED NeoPixel Ring (172mm) 
+- 2x 60 LED NeoPixel Ring (172mm) [60 LED 172mm Ring](https://www.ebay.co.uk/itm/132996155861)
 - 5V Power Supply (adequate for powering the LED ring) [5V 2000mA USB](https://www.bastelgarage.ch/5v-2000ma-usb-netzteil-ac-dc-adapter-weiss)
 - Logic Level Shifter (if needed by the ESP8266) [Logic Level Converter 2-Kanal 5V / 3.3V](https://www.bastelgarage.ch/logic-level-converter-2-kanal-5v-3-3v)
 
