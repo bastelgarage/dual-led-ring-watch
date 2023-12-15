@@ -57,15 +57,22 @@ void loop() {
   // Hole die aktuelle Stunde, Minute und Sekunde von der NTP-Zeit
   int stunden = hour(local);
   int minuten = minute(local);
+  int seconds = second(local);
 
 
   // Setze die LEDs basierend auf der aktuellen Zeit
-  setTimeOnLEDs(stunden, minuten, 0, 0, 55, 0, 55, 0);  // Blau für Minuten, Grün für Stunden
+  setTimeOnLEDs(stunden, minuten, seconds, 0, 0, 55, 0, 55, 0);  // Blau für Minuten, Grün für Stunden
   delay(1000);                                          // Warte eine Sekunde bevor der nächste Durchlauf beginnt
 }
 
-void setTimeOnLEDs(int stunden, int minuten, byte rMinuten, byte gMinuten, byte bMinuten, byte rStunden, byte gStunden, byte bStunden) {
+void setTimeOnLEDs(int stunden, int minuten, int seconds, byte rMinuten, byte gMinuten, byte bMinuten, byte rStunden, byte gStunden, byte bStunden) {
   pixels.clear();  // Schalte alle LEDs aus
+        
+  // Set the seconds LED
+  for (int i = 0; i < seconds; i++) {
+    int secondLedIndex = (i + 29) % 60;                                                // Beginne bei LED 29 für die erste Minute
+    pixels.setPixelColor(secondLedIndex, pixels.Color(55, 0, 0));  // Setze Farbe für jede Minute
+  }
 
   // Setze die Minuten-LEDs
   for (int i = 0; i < minuten; i++) {
