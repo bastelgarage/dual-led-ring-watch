@@ -55,8 +55,8 @@ void loop() {
   time_t local = CE.toLocal(utc);
 
   // Hole die aktuelle Stunde, Minute und Sekunde von der NTP-Zeit
-  int stunden = timeClient.getHours();
-  int minuten = timeClient.getMinutes();
+  int stunden = hour(local);
+  int minuten = minute(local);
 
 
   // Setze die LEDs basierend auf der aktuellen Zeit
